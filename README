@@ -1,0 +1,15 @@
+TranslationDefaultScope
+=======================
+
+You can specify a default_scope in any view which is always merged into translate and t (of I18n).
+
+
+Example
+=======
+
+	self.default_scope = [:always, :prepend, :this, :scope]
+	...
+	t(:key, :scope => [:to, :be, :appended])
+	# calls t(:key, :scope => [:always, :prepend, :this, :scope, :to, :be, :appended])
+	
+Copyright (c) 2009 Caroo GmbH, released under the MIT license
